@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-hero-height {
+  height: 550px; /* You can adjust this height as needed */
+}
+
+.hero-section-1 {
+  background-image: url("../src/assets/bg/svg-bg1.svg");
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+}
+
+.hero-section-2 {
+  background-image: url("../src/assets/svg-bg2.svg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-section-3 {
+  background-image: url("../src/assets/svg-bg3.svg");
+  background-size: cover;
+  background-position: center;
+}
+.hero-section-4 {
+  background-image: url("../src/assets/svg-bg4.svg");
+  background-size: cover;
+  background-position: center;
+}

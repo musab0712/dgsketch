@@ -5,9 +5,15 @@ import Header from "./components/Header/Header";
 export default function Layout() {
   return (
     <>
-      <Header />
+      <div className=" bg-white px-2 md:px-8 shadow-md sticky top-0 left-0 right-0 z-10">
+        <Header />
+      </div>
+
       <Outlet />
-      <Footer />
+
+      <div className="px-2 md:px-8">
+        <Footer />
+      </div>
     </>
   );
 }

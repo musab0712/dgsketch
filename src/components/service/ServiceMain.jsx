@@ -1,0 +1,30 @@
+import React from "react";
+import ServiceCard from "./ServiceCard";
+import { services } from "../../constants/index";
+
+export default function ServiceMain() {
+  return (
+    <section className=" px-4 py-6 md:py-16 md:px-8 w-full  bg-slate-200">
+      <div className="flex flex-col">
+        <div className="pb-10 w-full flex flex-col items-center ">
+          <h1 className="pb-6  text-5xl font-bold text-center">
+            See What <span className=" text-red-700">Services</span> We Provide
+            You
+          </h1>
+          <p className=" text-lg font-semibold text-center pb-8 md:w-1/2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id quidem
+            animi ad Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Id quidem animi ad
+          </p>
+        </div>
+        <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+          {services.map((item, index) => (
+            <div key={index}>
+              <ServiceCard item={item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
