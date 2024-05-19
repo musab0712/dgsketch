@@ -24,6 +24,7 @@ export default function Industries() {
   return (
     <section className=" px-4 py-6 md:px-12 md:py-16">
       <div className="pb-10 w-full flex flex-col items-center ">
+        <h3 className="text-lg pb-3 text-center">INDUSTRIES</h3>
         <h1 className="pb-6  text-5xl font-bold text-center">
           <span className="text-red-700">INDUSTRIES</span> We Serve
         </h1>

@@ -7,6 +7,7 @@ export default function ServiceMain() {
     <section className=" px-4 py-6 md:py-16 md:px-8 w-full  bg-slate-200">
       <div className="flex flex-col">
         <div className="pb-10 w-full flex flex-col items-center ">
+          <h3 className="text-lg pb-3 text-center">SERVICES</h3>
           <h1 className="pb-6  text-5xl font-bold text-center">
             See What <span className=" text-red-700">Services</span> We Provide
             You

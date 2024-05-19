@@ -7,9 +7,11 @@ import "swiper/css";
 import "swiper/css/autoplay";
 export default function OurTech() {
   return (
-    <section className="w-full  px-4 py-20 pl-28">
-      <h1 className=" text-4xl font-bold text-center pb-12">Our Tech</h1>
-      <div className="">
+    <section className="w-full  px-4 py-8 md:px-8 md:py-20">
+      <h1 className=" text-red-600 text-4xl font-bold text-center pb-12">
+        Our Tech
+      </h1>
+      <div className="md:pl-28">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Autoplay]}
