@@ -3,6 +3,7 @@ import MainContent from "./MianContent";
 import { Sidebar } from "./Sidebar";
 import offer1 from "../../assets/offers/offer1.png";
 import { industries } from "../../constants/index";
+import { motion } from "framer-motion";
 
 export default function Industries() {
   const [selectedItem, setSelectedItem] = useState({
@@ -23,7 +24,18 @@ export default function Industries() {
 
   return (
     <section className=" px-4 py-6 md:px-12 md:py-16">
-      <div className="pb-10 w-full flex flex-col items-center ">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.6,
+          x: { type: "spring", stiffness: 60 },
+          opacity: { duration: 1 },
+          ease: "easeIn",
+          duration: 1,
+        }}
+        className="pb-10 w-full flex flex-col items-center "
+      >
         <h3 className="text-lg pb-3 text-center">INDUSTRIES</h3>
         <h1 className="pb-6  text-5xl font-bold text-center">
           <span className="text-red-700">INDUSTRIES</span> We Serve
@@ -33,7 +45,7 @@ export default function Industries() {
           solution developed is highly customized to meet your business
           requirements.
         </p>
-      </div>
+      </motion.div>
       <div className="flex flex-col md:flex-row h-auto">
         <div>
           <Sidebar items={industries} onSelect={handleSelectItem} />

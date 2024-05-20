@@ -143,21 +143,27 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-bold text-gray-900 uppercase ">
                 Contact
               </h2>
-              <p className=" flex">
+              <p className="flex">
                 <BsFillTelephoneOutboundFill size={20} />
-                <span className=" text-gray-500">Phone </span>
+                <span className=" pl-2 text-gray-500">Phone </span>
               </p>
-              <button onClick={handleCallDialerClick}>
+              <button
+                className=" pl-5 text-left"
+                onClick={handleCallDialerClick}
+              >
                 <p className="text-gray-500">+ 91-7352817229</p>
               </button>
-              <button onClick={handleCallDialerClick1}>
+              <button
+                className=" pl-5 text-left"
+                onClick={handleCallDialerClick1}
+              >
                 <p className="text-gray-500">+ 91-7352817229</p>
               </button>
               <p className=" flex pt-4">
                 <AiFillMail size={25} />
                 <span className="text-gray-500 pl-2 ">Email </span>
               </p>
-              <button onClick={handleEmailAppClick}>
+              <button className=" pl-6 text-left" onClick={handleEmailAppClick}>
                 <p className="text-gray-500 ">info@itconnectindia.com</p>
               </button>
             </div>

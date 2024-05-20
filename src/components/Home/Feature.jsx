@@ -1,11 +1,24 @@
 import { Button } from "flowbite-react";
 import { FeatureCard } from "./FeatureCard";
 import { features } from "../../constants/index";
+import { motion } from "framer-motion";
+
 export default function Feature() {
   return (
     <>
       <section className=" px-4 md:px-8 py-6 md:py-16 bg-slate-200">
-        <div className="pb-10 w-full flex flex-col items-center ">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.6,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="pb-10 w-full flex flex-col items-center "
+        >
           <h3 className="text-lg pb-3">FEATURES</h3>
           <h1 className="text-center text-5xl font-bold pb-5">
             We are <span className=" text-red-600">different</span> because...
@@ -18,7 +31,7 @@ export default function Feature() {
           <Button size="lg" className=" rounded-full ">
             Get Started
           </Button>
-        </div>
+        </motion.div>
         <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {features.map((item, index) => (
             <FeatureCard

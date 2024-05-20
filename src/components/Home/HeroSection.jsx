@@ -1,5 +1,6 @@
 import { Button, Carousel } from "flowbite-react";
 import marketing from "../../assets/img/marketing.svg";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -7,26 +8,74 @@ export default function HeroSection() {
       <div className="md:px-8 flex h-full flex-col md:flex-row ">
         <div className=" w-full pt-10  md:pt-28 md:w-1/2 flex flex-col items-center md:items-start">
           <div className=" pb-10 text-center md:text-left">
-            <h1 className=" pb-6  text-5xl font-bold">
-              <span className="text-red-700">Result Based </span> Digital
-              Marketing Agency
-            </h1>
-            <p className=" text-lg font-semibold">
+            <motion.div
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 0.2,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 1 },
+                ease: "easeIn",
+                duration: 1,
+              }}
+              className=" pb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+            >
+              <p>
+                <span className="text-red-700">Result Based </span> Digital
+              </p>
+              <p className="py-2">Marketing Agency</p>
+            </motion.div>
+            <motion.p
+              initial={{ x: -100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{
+                delay: 0.3,
+                x: { type: "spring", stiffness: 60 },
+                opacity: { duration: 0.6 },
+                ease: "easeIn",
+                duration: 1,
+              }}
+              className=" text-lg font-semibold"
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
               fuga, consectetur voluptas adipisci incidunt amet. Nam.
-            </p>
+            </motion.p>
           </div>
-          <div className="flex gap-3">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.4,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="flex gap-3"
+          >
             <Button size="lg" className=" rounded-full">
               Get Started
             </Button>
-            <Button size="lg" className=" rounded-full">
+            <Button size="lg" className=" rounded-full ">
               Book A Meeting
             </Button>
-          </div>
+          </motion.div>
         </div>
         <div className=" w-full md:w-1/2 p-5 flex justify-center">
-          <img src={marketing} alt="heroImg-1" className=" w-4/5 md:w-full " />
+          <motion.img
+            src={marketing}
+            alt="heroImg-1"
+            className=" w-4/5 md:w-full "
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+          />
         </div>
       </div>
     </section>
