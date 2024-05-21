@@ -29,7 +29,7 @@ export default function Header() {
         </Navbar.Link>
         <Navbar.Link as={"div"}>
           <Link
-            to="/"
+            to="/about"
             className="text-lg font-semibold hover:font-bold hover:text-orange-600"
           >
             About
@@ -37,7 +37,7 @@ export default function Header() {
         </Navbar.Link>
         <Navbar.Link as={"div"}>
           <Link
-            to="/"
+            to="/wd"
             className="text-lg font-semibold hover:font-bold hover:text-orange-600"
           >
             Services
@@ -46,7 +46,7 @@ export default function Header() {
 
         <Navbar.Link as={"div"}>
           <Link
-            to="/"
+            to="/contact"
             className="text-lg font-semibold hover:font-bold hover:text-orange-600"
           >
             Contact
