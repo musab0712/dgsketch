@@ -10,7 +10,7 @@ export function FeatureCard({ title, detail, imgSrc }) {
         textShadow: "0 0 0 8px rgb(255,255,255)",
       }}
       transition={{
-        delay: 0.8,
+        delay: 0.2,
         x: { type: "spring", stiffness: 60 },
         opacity: { duration: 1 },
         ease: "easeIn",
